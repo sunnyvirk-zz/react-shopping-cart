@@ -1,0 +1,18 @@
+{
+  "name": "react-shopping-cart",
+  "version": "0.0.1",
+  "description": "Example React/Flux Shopping Cart",
+  "repository": "https://github.com/sunnyvirk/react-shopping-cart",
+  "dependencies": {
+    "express": "^4.12.0",
+    "jade": "^1.9.2"
+  },
+  "devDependencies": {
+    "6to5": "^3.6.5",
+    "gulp": "^3.8.11",
+    "gulp-jshint": "https://github.com/Greenfields/gulp-jshint/tarball/support-jsx",
+    "gulp-util": "^3.0.4",
+    "jshint-stylish": "^1.0.1"
+  },
+  "author": "Sunny Virk"
+}
