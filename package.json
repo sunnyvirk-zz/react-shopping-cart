@@ -10,6 +10,7 @@
   "devDependencies": {
     "6to5": "^3.6.5",
     "gulp": "^3.8.11",
+    "gulp-jasmine": "^2.0.0",
     "gulp-jshint": "https://github.com/Greenfields/gulp-jshint/tarball/support-jsx",
     "gulp-util": "^3.0.4",
     "jshint-stylish": "^1.0.1"
