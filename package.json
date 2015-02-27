@@ -5,14 +5,24 @@
   "repository": "https://github.com/sunnyvirk/react-shopping-cart",
   "dependencies": {
     "express": "^4.12.0",
-    "jade": "^1.9.2"
+    "jade": "^1.9.2",
+    "react": "^0.12.2",
+    "react-tools": "^0.12.2"
   },
   "devDependencies": {
     "6to5": "^3.6.5",
     "gulp": "^3.8.11",
     "gulp-jshint": "https://github.com/Greenfields/gulp-jshint/tarball/support-jsx",
     "gulp-util": "^3.0.4",
+    "jest-cli": "^0.4.0",
     "jshint-stylish": "^1.0.1"
   },
-  "author": "Sunny Virk"
+  "author": "Sunny Virk",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/specs/support/preprocessor.js",
+    "unmockedModulePathPatterns": ["<rootDir>/node_modules/react"]
+  }
 }
