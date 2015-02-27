@@ -38,6 +38,7 @@
     "xit": true,
     "fit": true,
     "beforeEach": true,
-    "spyOn": true
+    "spyOn": true,
+    "jest": true
   }
 }

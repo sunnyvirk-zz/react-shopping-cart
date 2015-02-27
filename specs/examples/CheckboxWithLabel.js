@@ -23,7 +23,7 @@ var CheckboxWithLabel = React.createClass({
 				/>
 				{this.state.isChecked ? this.props.labelOn : this.props.labelOff}
 			</label>
-		)
+		);
 	}
 });
 

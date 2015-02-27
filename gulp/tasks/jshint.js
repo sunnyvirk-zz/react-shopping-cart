@@ -6,7 +6,8 @@ export default function(gulp) {
         return gulp
             .src([
                 '**/*.js',
-                '!node_modules/**/*.js'
+                '!node_modules/**/*.js',
+                '!specs/examples/**/*.js'
             ])
             .pipe(jshint({defaultFile: '.jshintrc', jsx: true}))
             .pipe(jshint.reporter(jshintStylish));

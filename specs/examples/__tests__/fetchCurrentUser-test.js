@@ -6,7 +6,7 @@ describe('fetchCurrentUser', function() {
 		var fetchCurrentUser = require('../fetchCurrentUser');
 
 		// Call into the function we want to test
-		function dummyCallback() {};
+		function dummyCallback() {}
 		fetchCurrentUser(dummyCallback);
 
 		// Now make sure that $.ajax was properly called during the previous 2 lines
