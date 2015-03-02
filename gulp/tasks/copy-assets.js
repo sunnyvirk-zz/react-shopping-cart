@@ -5,7 +5,12 @@ export default function (gulp) {
     return merge(
       gulp
       .src('./assets/libs/**/*.js')
-      .pipe(gulp.dest('./public/libs'))
+      .pipe(gulp.dest('./public/libs')),
+
+      gulp
+      .src('./assets/img/**/*')
+      .pipe(gulp.dest('./public/img'))
+
     );
   });
 }
