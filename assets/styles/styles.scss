@@ -1,2 +1,67 @@
-@import "base/normalize";
-@import "base/variables";
+@import 'base/normalize';
+@import 'base/variables';
+
+.flex-columns {
+  display: flex;
+  flex-direction: row;  
+  height: 100%;
+}
+
+.flex-column {
+  flex: 1;
+  height: 100%;
+}
+
+.flex-fixed-column {
+  flex: 0 0 auto;
+  height: 100%;
+
+  &.basket {
+    display: none;    
+  }
+}
+
+.flex-rows {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.flex-fixed-row {
+  flex: 0 0 auto;
+}
+
+.flex-row {
+  align-items: flex-start;
+  flex: 1;
+  overflow: auto;
+}
+
+.wrapper {
+  @include outer-container;
+  height: 100%;
+  width: 100%;
+}
+
+@include media($medium) {
+  .content-body {
+    overflow: visible;
+  }
+
+  .flex-fixed-column.basket {
+    display: block;
+    width: 180px;
+  }
+}
+
+@include media($large) {
+  .wrapper {
+    width: $bp4;
+  }
+}
+
+@include media($xlarge) {
+  .wrapper {
+    width: $bp5;
+  }
+}

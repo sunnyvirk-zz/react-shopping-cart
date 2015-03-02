@@ -1,3 +1,6 @@
+@import 'bourbon';
+@import 'neat';
+
 /////////////////////////////////
 // Color variables
 /////////////////////////////////
@@ -9,5 +12,24 @@ $bp1: 480px; 	// Will target mobile devices in landscape mode and up
 $bp2: 600px; 	// Targets tablets in portrait mode and up
 $bp3: 768px; 	// Targets tablets in landscape mode and up
 $bp4: 1024px; 	//Targets the desktop view
+$bp5: 1400px;
 
 $max-width: 100%;
+
+/////////////////////////////////
+//Breakpoint variables - using em's as they support zoom arguments for new-breakpoint(query, width, columns);
+/////////////////////////////////
+// Mobile portrait
+$xsmall: new-breakpoint(min-width $bp1 4);
+
+// Mobile landscape
+$small: new-breakpoint(min-width $bp2 8);
+
+//Tablet Portrait
+$medium: new-breakpoint(min-width $bp3 12);
+
+//Tablet Landscape
+$large: new-breakpoint(min-width $bp4 12);
+
+//Desktop
+$xlarge: new-breakpoint(min-width $bp5 20);
