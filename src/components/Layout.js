@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './Header';
+import Basket from './Basket';
 
 export default React.createClass({
 	render() {
@@ -21,7 +22,7 @@ export default React.createClass({
 					</div>
 					<aside className='flex-fixed-column basket'>
 						<div className='scroll-area'>
-					    	<h2>Basket area</h2>
+					    	<Basket />
 					  	</div>
 					</aside>
 				</div>

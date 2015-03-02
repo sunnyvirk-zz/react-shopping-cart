@@ -1,6 +1,12 @@
 @import 'base/normalize';
 @import 'base/variables';
 @import 'components/logo';
+@import 'components/basket';
+@import 'components/buttons';
+
+a {
+  text-decoration: none;
+}
 
 .flex-columns {
   display: flex;

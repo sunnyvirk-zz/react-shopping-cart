@@ -5,14 +5,20 @@
 // Color variables
 /////////////////////////////////
 
+$primary:		#13a7c7;
+$primary-hover:	#59c1d7;
+$light-grey:	#c8c8c8;
+
+
+
 /////////////////////////////////
 // Width Variables
 /////////////////////////////////
-$bp1: 480px; 	// Will target mobile devices in landscape mode and up
-$bp2: 600px; 	// Targets tablets in portrait mode and up
-$bp3: 768px; 	// Targets tablets in landscape mode and up
-$bp4: 1024px; 	//Targets the desktop view
-$bp5: 1400px;
+$bp1: 20em;
+$bp2: 30em;
+$bp3: 47.5em;
+$bp4: 64.3em;
+$bp5: 75em;
 
 $max-width: 100%;
 
