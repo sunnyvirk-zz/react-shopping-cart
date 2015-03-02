@@ -1,0 +1,55 @@
+.logo {
+  @include span-columns(1 of 4, block-collapse);
+
+  display: table-cell;
+
+  float: none;
+  line-height: 3.15em;
+  padding: 0 .5em;
+  text-align: center;
+
+  a {
+    display: inline-block;
+    padding: 10px 0;
+    vertical-align: middle;
+  }
+
+  h1 {
+    font-size: 1em;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  img {
+    max-width: 5.62em;
+    vertical-align: middle;
+  }
+}
+
+@include media($small) {
+  .logo {
+    @include span-columns(2 of 8, block-collapse);
+  }
+}
+
+@include media($medium) {
+  .logo {
+    @include span-columns(2);
+
+    h1 {
+      max-width: 100%;
+    }
+  }
+}
+
+@include media($large) {
+  .logo {
+    @include span-columns(2);
+  }
+}
+
+@include media($xlarge) {
+  .logo {
+    @include span-columns(3);
+  }
+}
