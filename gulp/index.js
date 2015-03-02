@@ -3,6 +3,8 @@ import gulp from 'gulp';
 import util from 'gulp-util';
 import path from 'path';
 
+gulp.task('default', ['jshint', 'browserify', 'copy-assets']);
+
 let dir = path.resolve(__dirname, 'tasks');
 for (let file of fs.readdirSync(dir)) {
   let task = require(path.resolve(dir, file));
