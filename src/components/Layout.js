@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from './Header';
 
 export default React.createClass({
 	render() {
@@ -7,9 +8,7 @@ export default React.createClass({
 				<div className='flex-columns'>
 					<div className='flex-column'>
 					 	<div className='flex-rows'>
-					    	<header>
-								<h2>The header component</h2>
-							</header>
+					    	<Header />
 					    	<div className='content-body flex-row'>
 					      		<div className='scroll-area'>
 					        		<h1>Page area</h1>

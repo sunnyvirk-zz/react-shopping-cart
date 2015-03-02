@@ -1,4 +1,5 @@
 jest.dontMock('../Layout');
+jest.dontMock('../Header');
 
 describe('Layout', function() {
 	var React,
@@ -22,7 +23,8 @@ describe('Layout', function() {
 	});
 
 	it('should have a header component', function() {
-		var headerComponent = TestUtils.findRenderedDOMComponentWithTag(layout, 'header');
+		var Header = require('../Header');
+		var headerComponent = TestUtils.findRenderedComponentWithType(layout, Header);
 		expect(headerComponent).toBeDefined();
 	});
 
