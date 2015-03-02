@@ -1,0 +1,138 @@
+.shopping-basket {
+  background: #fff;
+  border-left: 1px solid $light-grey;
+  border-right: 1px solid $light-grey;
+  height: 100vh;
+  position: fixed;
+  right: -100%;
+  top: 0;
+  transition: right .3s ease-in-out;
+  width: 100%;
+  z-index: 100;
+  
+  &.active {
+    right: 0;
+  }
+
+  .basket-header {
+    border-bottom: 1px solid $light-grey;
+
+    .book-slot {
+      margin-top: 20px;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .button {
+      padding: 6px 35%;
+    }
+
+    .basket-title {
+      color: $primary;
+      font-size: 1.1rem;
+      margin: 0 auto;
+      padding: 15px 0;
+      text-align: left;
+      width: 90%;
+    }   
+
+    .icon {
+      font-size: 25px;
+    }
+
+    .basket-info {
+      float: right;
+      text-align: right;
+    }
+
+    .num-items {
+      color: #4c4744;
+      font-size: .6rem;
+    }
+  }
+
+  .basket-contents {
+    overflow: hidden;
+  }
+
+  .basket-footer {
+    background: #f2f2f2;
+    border-top: solid 1px $primary;
+    bottom: 0;
+    font-size: 1.2rem;
+    padding: 15px 10px 35px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    
+    .button {
+      padding: 8px 25px;
+    }
+  }
+}
+
+@include media($medium) {
+  .shopping-basket {
+    margin-right: 0;
+    position: fixed;
+    right: 0;
+    transition: none;
+    width: 180px;
+    
+    .basket-header {
+      .book-slot {
+        padding: 0 9px;
+      }
+
+      .button {
+        padding: 5px 25px;
+      }
+
+      .basket-title {
+        margin: 0;
+        padding: 15px 0;
+        text-align: center;
+        width: 80%;
+      }
+    }
+
+    .basket-footer {
+      padding: 20px 10px;
+
+      .button {
+        padding: 9px 45px;
+      }
+    }
+  }
+}
+
+@include media($large) {
+  .shopping-basket {
+    margin-right: -500px;
+    right: 50%;
+
+    .basket-header {
+      .button {
+        padding: 7px 35px;
+      }
+
+      .basket-title {
+        padding: 35px 0 15px;
+      }
+    }
+
+    .basket-footer {
+      padding: 20px 10px;
+      
+      .button {
+        padding: 11px 48px;
+      }
+    }
+  }
+}
+
+@include media($xlarge) {
+  .shopping-basket {
+    margin-right: -600px;
+  }
+}

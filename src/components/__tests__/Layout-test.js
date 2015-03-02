@@ -1,5 +1,6 @@
 jest.dontMock('../Layout');
 jest.dontMock('../Header');
+jest.dontMock('../Basket');
 
 describe('Layout', function() {
 	var React,
@@ -34,7 +35,8 @@ describe('Layout', function() {
 	});
 
 	it('shoudl have a basket component', function() {
-		var asideComponent = TestUtils.findRenderedDOMComponentWithTag(layout, 'aside');
-		expect(asideComponent).toBeDefined();
+		var Basket = require('../Basket');
+		var basketComponent = TestUtils.findRenderedComponentWithType(layout, Basket);
+		expect(basketComponent).toBeDefined();
 	});
 });
