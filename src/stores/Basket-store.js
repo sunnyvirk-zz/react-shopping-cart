@@ -9,6 +9,8 @@ export default Reflux.createStore({
 
 	listenables: [BasketActions],
 
+
+
 	onAddItem(item) {
 		var itemExists = _.where(this.basket, item);
         if (_.where(this.basket, item).length > 0) {

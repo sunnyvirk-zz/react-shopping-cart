@@ -70,5 +70,48 @@ describe('Basket Store', function() {
 		});
 
 	});
+
+	describe('add two items', function() {
+		beforeEach(function(){
+			BasketActions.addItem({
+				title: "Product 1",
+				price: 100
+			});
+			BasketActions.addItem({
+				title: "Product 2",
+				price: 100
+			});
+			jest.runOnlyPendingTimers();		
+		});
+
+		it('should have basket count of 2', function() {
+			expect(BasketStore.basket.length).toEqual(2);
+		});
+
+	});
+
+	describe('add two of the same item', function() {
+		beforeEach(function(){
+			BasketStore.basket = [];
+			BasketActions.addItem({
+				title: "Product 1",
+				price: 100
+			});
+			BasketActions.addItem({
+				title: "Product 1",
+				price: 100
+			});
+			jest.runAllTimers();
+		});
+
+		it('should have basket count of 1', function() {
+			expect(BasketStore.basket.length).toEqual(1);
+		});
+
+		it('should have one item and that qty should be 2', function() {
+			expect(BasketStore.basket[0].qty).toEqual(2);
+		});
+
+	});
 	
 });
