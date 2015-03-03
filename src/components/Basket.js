@@ -1,6 +1,11 @@
 import React from 'react';
+import Reflux from 'reflux';
+import BasketStore from '../stores/Basket-store';
 
 export default React.createClass({
+
+	mixins: [Reflux.connect(BasketStore, "basket")],
+
 	render() {
 		return (
 			<div className='shopping-basket'>
@@ -9,7 +14,7 @@ export default React.createClass({
 		            <em className='icon fa fa-shopping-cart'></em>
 		            <div className='basket-info'>
 		              <div className='price'><span>£0.00</span></div>
-		              <div className='num-items'><span>0 items</span></div>
+		              <div className='num-items'><span>{this.state.basket.length} items</span></div>
 		            </div>
 		          </div>
 				</div>

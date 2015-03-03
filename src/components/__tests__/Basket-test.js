@@ -1,4 +1,5 @@
 jest.dontMock('../Basket');
+jest.dontMock('../../stores/Basket-store');
 
 describe('Basket', function() {
 
