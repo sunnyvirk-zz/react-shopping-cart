@@ -1,6 +1,7 @@
 jest.dontMock('../Layout');
 jest.dontMock('../Header');
 jest.dontMock('../Basket');
+jest.dontMock('../../stores/Basket-store');
 
 describe('Layout', function() {
 	var React,
@@ -34,7 +35,7 @@ describe('Layout', function() {
 		expect(footerComponent).toBeDefined();
 	});
 
-	it('shoudl have a basket component', function() {
+	it('should have a basket component', function() {
 		var Basket = require('../Basket');
 		var basketComponent = TestUtils.findRenderedComponentWithType(layout, Basket);
 		expect(basketComponent).toBeDefined();

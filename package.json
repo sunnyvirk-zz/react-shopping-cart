@@ -4,13 +4,14 @@
   "description": "Example React/Flux Shopping Cart",
   "repository": "https://github.com/sunnyvirk/react-shopping-cart",
   "dependencies": {
+    "babel": "4.4.3",
     "express": "^4.12.0",
     "jade": "^1.9.2",
+    "lodash": "^3.3.1",
     "react": "^0.12.2",
     "react-router": "^0.12.4",
     "react-tools": "^0.12.2",
-    "reflux": "^0.2.5",
-    "babel": "4.4.3"
+    "reflux": "^0.2.5"
   },
   "devDependencies": {
     "babel-jest": "*",
@@ -45,7 +46,9 @@
       "es6"
     ],
     "unmockedModulePathPatterns": [
-      "<rootDir>/node_modules/react"
-    ]
+      "<rootDir>/node_modules/react",
+      "<rootDir>/node_modules/reflux"
+    ],
+    "setupEnvScriptFile": "<rootDir>/specs/support/localStorageMock.js"
   }
 }
