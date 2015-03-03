@@ -9,14 +9,13 @@ export default Reflux.createStore({
 
 	listenables: [BasketActions],
 
-
-
 	onAddItem(item) {
+		var BasketStore = this;
 		var itemExists = _.where(this.basket, item);
         if (_.where(this.basket, item).length > 0) {
 			this.basket.forEach(function(basketItem, i){
 				if(basketItem.id === itemExists.id){
-					BasketActions.increaseItem(i);
+					BasketStore.onIncreaseItem(i);
 				}
 			});
         } else {
@@ -29,13 +28,21 @@ export default Reflux.createStore({
         }
 	},
 
-	onRemoveItem() {},
+	onRemoveItem(index) {
+		this.basket.splice(index, 1);
+	},
 
 	onIncreaseItem(index) {
 		this.basket[index].qty++;
 	},
 
-	onDecreaseItem() {},
+	onDecreaseItem(index) {
+		if(this.basket[index].qty > 1){
+			this.basket[index].qty--;
+		} else {
+			this.onRemoveItem(index);
+		}
+	},
 
     updateBasket(basket){
         localStorage.setItem(localStorageKey, JSON.stringify(basket));

@@ -108,10 +108,55 @@ describe('Basket Store', function() {
 			expect(BasketStore.basket.length).toEqual(1);
 		});
 
-		it('should have one item and that qty should be 2', function() {
+		it('should have one item and the qty should be 2', function() {
 			expect(BasketStore.basket[0].qty).toEqual(2);
 		});
 
+	});
+
+	describe('decrease item', function() {
+		beforeEach(function(){
+			BasketStore.basket = [];
+			BasketActions.addItem({
+				title: "Product 1",
+				price: 100
+			});
+			BasketActions.addItem({
+				title: "Product 1",
+				price: 100
+			});
+			BasketActions.decreaseItem(0);
+			jest.runAllTimers();
+		});
+
+		it('should decrease the qty to 1', function() {
+			expect(BasketStore.basket[0].qty).toEqual(1);
+		});
+
+		it('should remove item if the qty is 1', function(){
+			BasketActions.decreaseItem(0);
+			jest.runOnlyPendingTimers();
+			expect(BasketStore.basket[0]).toBeUndefined();
+		});
+	});
+
+	describe('remove item', function() {
+		beforeEach(function(){
+			BasketStore.basket = [];
+			BasketActions.addItem({
+				title: "Product 1",
+				price: 100
+			});
+			BasketActions.addItem({
+				title: "Product 1",
+				price: 100
+			});
+			BasketActions.removeItem(0);
+		});
+
+		it('should remove item', function() {
+			expect(BasketStore.basket[0]).toBeUndefined();
+		});
 	});
 	
 });
